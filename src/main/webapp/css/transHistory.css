@@ -1,0 +1,43 @@
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.collapse-title-star span{
+	color: black;
+	font-size: 0.8em;
+}
+.iconfont-de{
+	margin-left: 300px;
+	font-size: 1.2em;
+}
+.iconfont-de i{
+	font-size: 1.2em;
+	color: #BEBEC5;
+}
+.card-body-content-img{
+	width: 20%;
+}
+.card-body-content-img img{
+	width: 100%;
+}
+.card-body-content-price{
+	margin-left: 80px;
+	margin-top: 30px;
+}
+.review-add-sort{
+   	width: 100%;
+   	height: 40px;
+}
+.review-add-sort span{
+	font-size: 0.8em;
+}
+.review-add-sort button{
+	height: 100%;
+	width: 100%;
+	background-color: #532D6D;
+	border: none;
+   	border-radius: 3px;
+	
+}

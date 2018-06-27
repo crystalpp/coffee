@@ -20,7 +20,10 @@
 	<mvc:resources location="/img/" mapping="/img/**"></mvc:resources>
 	<mvc:resources location="/upload/" mapping="/upload/**"></mvc:resources>
 	<mvc:resources location="/images/" mapping="/images/**"></mvc:resources>
-
+	<mvc:resources location="/font_719350_a874xvbb9r7/" mapping="/font_719350_a874xvbb9r7/**"></mvc:resources>
+	<mvc:resources location="/bootstrap-3.3.7-dist/" mapping="/bootstrap-3.3.7-dist/**"></mvc:resources>
+	<mvc:resources location="/font/" mapping="/font/**"></mvc:resources>
+	<mvc:resources location="/html/" mapping="/html/**"></mvc:resources>
 	<!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->
 	<bean id="mappingJacksonHttpMessageConverter"
 		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">

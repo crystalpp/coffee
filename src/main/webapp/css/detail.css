@@ -1,0 +1,273 @@
+body{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	color: #505054;
+    font-family: "Nunito",sans-serif,georgia,serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+}
+.my-header{
+	margin-top: -45px;
+border-bottom: 1px solid #EBEBEB;
+margin-bottom: 50px;
+}
+.middle{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.container{
+	display: flex;
+}
+.columns{
+	width: 47%;
+}
+.product .media{
+	width: 47%;
+	position: relative;
+	
+	margin: 0 0 40px;
+}
+.media img{
+	max-width: 100%;
+}
+.product-info-main{
+	width: 50%;
+	
+	margin-left: 50px;
+}
+.page-title{
+	font-size: 30px;
+}
+.rating-summary .rating-result{
+	margin-left: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+	left: 0 !important;
+}
+.rating-summary .label{
+	border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.rating-result{
+	width: 110px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    
+}
+.rating-result i{
+	color: #505054;
+}
+.product-info-main .attribute .overview{
+	margin-bottom: 15px;
+}
+p{
+	margin: 0;
+}
+ .table{
+	width: 100%;
+}
+tr{
+	width: 100%;
+}
+th{
+	color: #9999AD;
+	
+}
+.th_special{
+	font-size: 2.4rem;
+    font-weight: 400;
+    color: #505054;
+}
+.td_special i{
+	font-size: 40px;
+}
+.box-tocart{
+	display: block;
+	margin-bottom: 3rem;
+	display: flex;
+}
+.add-bag{
+	width: 60%;
+}
+.add-bag-button{
+	width: 80%;
+    height: 36px;
+    padding: 6px 25px;
+    margin-left: 30px;
+    margin-top: -3px;
+    background-color: #532D6D;
+ 	border-radius: 3px;
+ 	border: solid #532D6D 1px;
+   
+}
+.product-info-detail{
+	margin: 0;
+	
+}
+.detail-title{
+	display: flex;
+	
+}
+.product-info-detail span{
+	color: #505054;
+	font-size: 1.2em;
+	font-weight: bolder;
+	
+}
+.product-feature-tile{
+	margin-left: 30px;
+}
+.line{
+	width: 100%;
+	margin-top: 20px;
+	border-bottom: 2px solid #EBEBEB;
+}
+.detail-msg .img{
+	margin-left: 90px;
+}
+.PF{
+	border-bottom: 2px solid #505054;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: "";
+}
+.product-like{
+	width: 100%;
+	background-color: #F6F6F6;
+	margin-top: 50px;
+	text-align: center;
+	height: 500px;
+}
+.product-like-text{
+	font-size: 1.8rem !important;
+    color: #505054;
+    font-weight: 600;
+   margin-left: auto;
+   margin-right: auto;
+
+ }
+ .product-like-title{
+   margin-top: 50px;
+ 	
+ }
+.product-like .product-like-img{
+	border: 1px soli red;
+}
+.product-like-img{
+	max-width: 100%;
+	width: 100%;
+	background-color: #F6F6F6;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	
+}
+.product-like-img img{
+	margin: 0 auto;
+}
+.product-like-img-descirble{
+	width: 100%;
+	background: white;
+}
+
+.user-review{
+    border-top: 1px solid #ebebeb;
+	margin-top: 3rem;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.line1{
+	margin-top: 20px;
+	border-bottom: 1px solid #ebebeb;
+	width: 100%;
+}
+.review-add-sort{
+   	width: 15%;
+   	height: 40px;
+  	margin-left: 20px;
+  	margin-top: 20px;
+}
+.review-add-sort1{
+   	width: 30%;
+   	height: 40px;
+  	margin-left: 20px;
+  	margin-top: 20px;
+}
+.review-add-sort button{
+	height: 100%;
+	width: 100%;
+	background-color: #532D6D;
+	border: none;
+   	border-radius: 3px;
+	
+}
+.review-add-sort1 button{
+	height: 100%;
+	width: 100%;
+	background-color: #532D6D;
+	border: none;
+   	border-radius: 3px;
+	
+}
+.review-list-sum span{
+	margin-left: 10px;
+}
+.review-list-detail{
+	margin: 0 auto;
+    max-width: 730px;
+}
+.review-list-detail{
+
+	max-width: 100%;
+	width: 70%;
+}
+.review-list-li{
+	margin-top: 70px;
+	width: 100%;
+	border-bottom: 1px solid #EBEBEB;
+}
+.review-date-hot{
+	width: 100%;
+	display: flex;
+}
+.review-date{
+	margin-left: 60%;
+}
+.review-li-title{
+	margin-top: 10px;
+}
+.review-li-title span{
+	font-weight: bolder;
+	color: #505054;
+	font-size: 1.5em;
+}
+.review-li-content{
+	margin-top: 10px;
+}
+.review-li-content span{
+	color: #505054;
+	font-size: 1.1em;
+}
+.review-li-author{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.review-li-author span{
+	color: #ACADAE;
+	font-size: 1em;
+}

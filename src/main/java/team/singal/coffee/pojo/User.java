@@ -25,7 +25,7 @@ public class User implements Serializable {
 	@Column(length = 20)
 	private String userName;
 
-	@Column(length = 11)
+	@Column(length = 50)
 	private String userPassword;
 
 	@Column(length = 11)
@@ -33,9 +33,6 @@ public class User implements Serializable {
 
 	@Column(length = 20)
 	private String email;
-
-	@Column(length = 2)
-	private String sex;
 
 	@Column(length = 11)
 	private String birthday;
@@ -95,14 +92,6 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	public String getSex() {
-		return sex;
-	}
-
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-
 	public String getBirthday() {
 		return birthday;
 	}
@@ -154,9 +143,9 @@ public class User implements Serializable {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", userName=" + userName + ", userPassword=" + userPassword + ", userPhone="
-				+ userPhone + ", email=" + email + ", sex=" + sex + ", birthday=" + birthday + ", receiveInfos="
-				+ receiveInfos + ", clubCards=" + clubCards + ", assesses=" + assesses + ", records=" + records
-				+ ", carts=" + carts + "]";
+				+ userPhone + ", email=" + email + ", birthday=" + birthday + ", receiveInfos=" + receiveInfos
+				+ ", clubCards=" + clubCards + ", assesses=" + assesses + ", records=" + records + ", carts=" + carts
+				+ "]";
 	}
 
 }

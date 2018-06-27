@@ -1,0 +1,138 @@
+/*模态框样式表*/
+ul{
+	list-style: none;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/iconfont.woff') format('woff'),
+  url('../font/iconfont.ttf') format('truetype'),
+  url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:20px;
+ /* font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;*/
+}
+.modal-body p{
+	font-size: 10px;
+}
+.modal-body .col-md-4{
+	height: 700px;
+	background: url(../img/account-sidebar.jpg);
+
+	 background-position: 50% 50%;  
+	 background-repeat:no-repeat; 
+	
+}
+.modal-body  .row .col-md-8 .login-block{
+	width: 80%;
+	/*margin-top:100px ;*/
+	
+}
+.modal-body  .row .col-md-8 .login-block .form-horizontal{
+	width: 100%;
+	margin-top: 50px;
+}
+.modal-body .btn{
+	width: 100%;
+}
+/*.btn-face i{
+	right: 0;
+	  font-size:20px;
+}*/
+ 
+.modal-body  .content-p {
+   
+ 
+    line-height: 1px;
+    border-left: 80px solid #ddd;
+    border-right: 80px solid #ddd;
+    text-align: center;
+    }
+
+.mycolor{
+ background-color:#532d6d;
+}
+.mycolor1{
+	background-color: #3B5998;
+}
+.modal-body  .form-group {
+  position: relative;
+  font-size: 15px;
+ /* color: #666;*/
+}
+.modal-body .form-group + .form-group {
+  margin-top: 30px;
+}
+.modal-body  .form-group .form-label {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.modal-body .form-group .form-control1 {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  height: 35px;
+  background: none;
+  border: none;
+  padding: 5px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-bottom: 1px solid #777;
+}
+.modal-body .form-group .form-control1:invalid {
+  outline: none;
+}
+.modal-body .form-group .form-control1:focus, .form-group .form-control1:valid {
+  outline: none;
+  color: #532d6d;
+/*  box-shadow: 0 1px #FF4081;*/
+  border-color: #532d6d;
+}
+.modal-body .form-group .form-control1:focus + .form-label, .form-group .form-control1:valid + .form-label {
+  font-size: 12px;
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+.modal-body .forget_password_link {
+	text-align: center;
+}
+.modal-body .forget_password_link a{
+	    font-size: 12px;
+/*    margin-left: 1rem;*/
+    margin-top: 0;
+    
+    color:#505054;
+}
+.modal-body .form-group-content{
+	margin-top: 30px;
+	text-align: center;
+}
+.modal-body .form-group-content h4{
+	    font-family: "Nunito",'Helvetica Neue',Helvetica,Arial,sans-serif !important;
+    font-weight: 400 !important;
+    color: #505054 !important;
+    font-size: 1.4rem;
+}
+.modal-body .form-group-content h4 a{
+	    color: #532d6d;
+    font-weight: 700;
+}
+.modal-body .form-group-content p{
+	    color: #8a8a8d;
+    font-family: "Nunito",'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    font-size: 1.2rem;
+}

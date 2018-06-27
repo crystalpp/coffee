@@ -1,0 +1,61 @@
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.card-body{
+	width: 400px;
+	height: 200px;
+	background-color: #252525;
+	border-radius: 10px;
+	margin-left: 20px;
+	text-align: center;
+
+}
+span{
+	color: #DACBA3;
+}
+.card-body-title{
+	margin-left: 20px;
+	margin-top: 10px;
+	display: flex;
+	text-align: center;
+	
+}
+.card-body-title h3 {
+	color: #DACBA3;
+	font-style: italic;
+	font-weight: 950;
+}
+.card-body-title-li{
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.twop{
+	margin-left: 180px;
+}
+.card-body-cardNum{
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.card-body-cardNum span{
+	font-weight: 950;
+	font-size: 1.5em;
+	letter-spacing: 1px;
+}
+.card-body-cardName{
+	margin-left: -140px;
+	margin-top: 6px;
+}
+.card-body-cardName span{
+	font-size: 0.8em;
+}
+.card-body-cardStore{
+	margin-left: 190px;
+	margin-top: 20px;
+}
+.card-body-cardStore span{
+	font-size: 0.6em;
+	font-style: italic;
+}

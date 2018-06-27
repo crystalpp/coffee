@@ -1,6 +1,7 @@
 package team.singal.coffee.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +9,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * 会员卡实体类
@@ -34,6 +39,9 @@ public class ClubCard implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
+	@Temporal(TemporalType.TIMESTAMP)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date cardDate;
 
 	public User getUser() {
 		return user;
@@ -75,10 +83,18 @@ public class ClubCard implements Serializable {
 		this.cType = cType;
 	}
 
+	public Date getCardDate() {
+		return cardDate;
+	}
+
+	public void setCardDate(Date cardDate) {
+		this.cardDate = cardDate;
+	}
+
 	@Override
 	public String toString() {
 		return "ClubCard [id=" + id + ", cId=" + cId + ", cBalance=" + cBalance + ", cType=" + cType + ", user=" + user
-				+ "]";
+				+ ", cardDate=" + cardDate + "]";
 	}
 
 }

@@ -1,0 +1,146 @@
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.form{
+	width: 90%;
+}
+.choose-place{
+
+}
+.button-sure{
+	display: flex;
+	margin-top: 20px;
+}
+.button-sure-btn{
+	height: 40%;
+	margin-right: 20px;
+}
+.place-filed{
+	display: flex;
+	
+}
+.review-add-sort{
+   	width: 15%;
+   	height: 40px;
+  	margin-left: 20px;
+  	margin-top: 20px;
+}
+.review-add-sort button{
+	height: 100%;
+	width: 100%;
+	background-color: #532D6D;
+	border: none;
+   	border-radius: 3px;
+	
+}
+.save-address{
+	margin-top: 50px;
+}
+.action-button{
+	display: flex;
+	margin-top: -20px;
+}
+.review-add-sort1{
+   	width: 45%;
+   	height: 40px;
+  	margin-left: 20px;
+  	margin-top: 20px;
+}
+.review-add-sort1 button{
+	height: 100%;
+	width: 100%;
+	background-color: #532D6D;
+	border: none;
+   	border-radius: 3px;
+	
+}
+.review-add-sort2{
+   	width: 50%;
+   	height: 40px;
+  	margin-left: 20px;
+  	margin-top: 20px;
+}
+.review-add-sort2 button{
+	height: 100%;
+	width: 100%;
+	background-color: #D84C29;
+	border: none;
+   	border-radius: 3px;
+	
+}
+
+.box {
+	max-width: 65%;
+	height: 40%;
+	background: whitesmoke;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	box-shadow: 0 0 100px #333333;
+	display: none;
+	z-index: 99;
+	border-radius: 4px;
+	width: 100%;
+}
+
+.box-shadow {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	display: none;
+	/*  */
+	z-index: 98;
+}
+
+.box-th {
+	width: 70%;
+	margin-top: 4%;
+	margin-left: 15%;
+	height: 40px;
+	background: #e3e8ee;
+}
+
+.box-th p {
+	width: 25%;
+	height: 100%;
+	color: cornflowerblue;
+	font-size: 13px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+}
+
+.box-th input {
+	border: none;
+	width: 75%;
+	height: 100%;
+	outline: none;
+	float: left;
+	text-align: center;
+	background: white;
+}
+.model-form{
+	width: 80%;
+	margin: 0 auto;
+}
+.close {
+	float: right;
+	border: none;
+	font-size: 12px;
+	width: 60px;
+	background: yellowgreen;
+	padding: 3px;
+}

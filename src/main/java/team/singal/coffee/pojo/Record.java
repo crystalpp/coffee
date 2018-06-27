@@ -1,6 +1,7 @@
 package team.singal.coffee.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +10,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * 购买记录实体类
@@ -37,6 +42,10 @@ public class Record implements Serializable {
 	@OneToOne
 	@JoinColumn(name = "receive_id")
 	private ReceiveInfo receiveInfo;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date receiveDate;
 
 	public String getId() {
 		return id;
@@ -78,10 +87,18 @@ public class Record implements Serializable {
 		this.receiveInfo = receiveInfo;
 	}
 
+	public Date getReceiveDate() {
+		return receiveDate;
+	}
+
+	public void setReceiveDate(Date receiveDate) {
+		this.receiveDate = receiveDate;
+	}
+
 	@Override
 	public String toString() {
 		return "Record [id=" + id + ", user=" + user + ", coffee=" + coffee + ", reNumber=" + reNumber
-				+ ", receiveInfo=" + receiveInfo + "]";
+				+ ", receiveInfo=" + receiveInfo + ", receiveDate=" + receiveDate + "]";
 	}
 
 }
