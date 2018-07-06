@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<% String id=request.getParameter("coffeeId"); 
+	String coffeeKind=request.getParameter("coffeeKind"); 
+	
+	%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,7 +38,8 @@
 						<div class="form-group">
 							<p class="content-p">OR LOG IN WITH</p>
 						</div>
-
+						
+						
 						<div class="form-group">
 							<input required="required" class="form-control1" name="userInfo" />
 							<label class="form-label">UserName</label>

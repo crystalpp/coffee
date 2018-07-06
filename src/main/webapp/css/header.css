@@ -41,9 +41,9 @@ body a:hover{
 .header-logo a:hover{
 	text-decoration: none;
 }
-.myimg{
+/* .myimg{
 	height: 100%;
-	}
+	} */
 .header-logo a h1{
 	color:#1ba8ed;
 	margin: 0;

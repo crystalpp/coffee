@@ -28,8 +28,7 @@ public class Coffee implements Serializable {
 	@Column(length = 30)
 	private String coName;
 
-	@Column(length = 2)
-	private String coHot;
+	private int coHot;
 
 	@Column(length = 255)
 	private String coIntroduce;
@@ -80,11 +79,11 @@ public class Coffee implements Serializable {
 		this.coName = coName;
 	}
 
-	public String getCoHot() {
+	public int getCoHot() {
 		return coHot;
 	}
 
-	public void setCoHot(String coHot) {
+	public void setCoHot(int coHot) {
 		this.coHot = coHot;
 	}
 

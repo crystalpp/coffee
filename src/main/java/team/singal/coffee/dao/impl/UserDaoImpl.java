@@ -56,4 +56,23 @@ public class UserDaoImpl implements UserDao {
 				.setParameter("userPassword", newPassword).uniqueResult();
 	}
 
+	@Override
+	public User findById(String userId) {
+		String hql = "from User u where u.id =:id";
+		return sessionFactory.getCurrentSession().createQuery(hql, User.class).setParameter("id", userId)
+				.uniqueResult();
+	}
+
+	@Override
+	public void updateUserInfo(User user) {
+		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().merge(user);
+	}
+	
+	@Override
+	public void updatePsw(User user) {
+		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().merge(user);
+	}
+
 }

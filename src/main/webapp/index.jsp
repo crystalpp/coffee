@@ -28,7 +28,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link href="${pageContext.request.contextPath}/css/index.css" rel='stylesheet' type='text/css' />
 		<link href="${pageContext.request.contextPath}/css/model.css" rel='stylesheet' type='text/css' />
-		<link href="${pageContext.request.contextPath}/css/login-register.css" rel="stylesheet" />
+		<%-- <link href="${pageContext.request.contextPath}/css/login-register.css" rel="stylesheet" /> --%>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/footer.css" />
 		<script src="${pageContext.request.contextPath}/js/jquery-1.11.0.min.js"></script>
 	<script src="${pageContext.request.contextPath}/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
@@ -68,15 +68,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a href="${pageContext.request.contextPath}/jsp/coffee.jsp">COFFEE</a>
 						</li>
 						<li>
-							<a href="${pageContext.request.contextPath}/jsp/ourStore.jsp">STORE</a>
+							<a href="${pageContext.request.contextPath}/jsp/ourStory.jsp">STORE</a>
 						</li>
-						<li>
-							<a href="${pageContext.request.contextPath}/jsp/cart.jsp">CART</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								My Account<b class="caret"></b>
-							</a>
+						<li><a id="cartTitle">CART</a>
+					</li>
+					<li class="dropdown"><a id="myAccountTitle" class="dropdown-toggle"
+						data-toggle="dropdown"> My Account<b class="caret"></b>
+					</a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="${pageContext.request.contextPath}/jsp/account.jsp">My Account</a>
@@ -91,6 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</li>
 
 					</ul>
+					
 					<!-- script-for-menu -->
 					<script>
 						$("span.menu").click(function() {
@@ -107,7 +106,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a class="login-a" data-toggle="modal" data-target="#myModal"><span class="twit"> </span></a>
 						</li>
 						<li>
-							<a class="login-a" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();"><span class="fb"> </span></a>
+							<a href="${pageContext.request.contextPath}/a-login.jsp" ><span class="fb"> </span></a>
 						</li>
 						<li>
 							<a class="login-a" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();"><span class="g"> </span></a>
@@ -119,9 +118,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="search-box">
 				<div id="sb-search" class="sb-search">
-					<form>
-						<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-						<input class="sb-search-submit" type="submit" value="">
+					<form id="form">
+						<input class="sb-search-input" placeholder="Enter your search term..." id="searchInput"type="search" name="search" >
+						<button class="sb-search-submit" type="button"  id="search"></button>
 						<span class="sb-icon-search"> </span>
 					</form>
 				</div>
@@ -136,7 +135,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="${pageContext.request.contextPath}/jsp/account.jsp">My Account</a>
 					</nav>
 					<!--script-nav -->
-					<script>
+					<script type="text/javascript">
 						$("span.menu").click(function() {
 							$("ul.navigatoin").slideToggle("300", function() {});
 						});
@@ -269,7 +268,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--//header-->
 		<!--search-scripts-->
-		<script src="${pageContext.request.contextPath}/js/classie.js"></script>
+		<%-- <script src="${pageContext.request.contextPath}/js/classie.js"></script> --%>
 		<script src="${pageContext.request.contextPath}/js/uisearch.js"></script>
 		<script>
 			new UISearch(document.getElementById('sb-search'));
@@ -770,10 +769,65 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 				
 <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-		</footer>
-		
-			
-		
+		</footer>		
 		<!--footer-->
 	</body>
+	<script type="text/javascript">
+	
+	$('#search').click(function(e){
+		var serar=$("#searchInput").val();
+		//alert(serar);
+	        //模拟点击登陆按钮，触发上面的 Click 事件 
+	      	window.location.href="${pageContext.request.contextPath}/jsp/coffee.jsp?coName="+serar;
+	        $.ajax({
+				type:"post",
+				url:"${pageContext.request.contextPath}s/findByName",
+				data:$("#form").serialize(),
+				async:true,
+				success : function(data) {
+				
+				}
+			});
+	    
+	});
+
+		
+		 $("#myAccountTitle").click(function(){
+			 var u="${u.userName}"
+				 /* alert(u); */
+				if(u==""){
+					alert("Please login");
+					<% session.setAttribute("backUrl", "http://localhost:8080/coffee/index.jsp");
+					   %>
+					window.location.href="${pageContext.request.contextPath}/jsp/login.jsp";
+				}
+				else{
+					window.location.href="${pageContext.request.contextPath}/jsp/account.jsp";
+				}
+		 })
+		 
+		  $("#cartTitle").click(function(){
+			 var u="${u.userName}"
+				 /* alert(u); */
+				if(u==""){
+					alert("Please login");
+					<% session.setAttribute("backUrl", "http://localhost:8080/coffee/index.jsp");
+					   %>
+					window.location.href="${pageContext.request.contextPath}/jsp/login.jsp";
+				}
+				else{
+					/* window.location.href="${pageContext.request.contextPath}/carts/findAll"; */
+					var iframes = document.getElementById("cartTitle");
+					/* 点击访问 获取用户接口 ，成功跳转 成功页面显示 */
+					iframes.href = "${pageContext.request.contextPath}/carts/findAll";
+				}
+		 })
+		 
+
+		
+		
+		
+			
+			
+		</script>
 </html>

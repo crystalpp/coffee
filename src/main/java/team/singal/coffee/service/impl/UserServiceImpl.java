@@ -3,6 +3,7 @@ package team.singal.coffee.service.impl;
 import java.util.UUID;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,12 @@ import team.singal.coffee.pojo.Message;
 import team.singal.coffee.pojo.User;
 import team.singal.coffee.service.UserService;
 
+/**
+ * 用户服务层
+ * 
+ * @author 皮艳萍
+ *
+ */
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
@@ -61,6 +68,56 @@ public class UserServiceImpl implements UserService {
 			return null;
 		}
 
+	}
+
+	@Override
+	public Message updateUserInfo(User user, String email, String userPhone, String birthday) {
+		// TODO Auto-generated method stub
+		User user2 = userDao.findByEmail(email);
+		User user3 = userDao.findByPhone(userPhone);
+		Message message = new Message();
+		if (user2 == null) {
+			if (user3 == null) {
+				user.setBirthday(birthday);
+				user.setEmail(email);
+				user.setUserPhone(userPhone);
+				userDao.updateUserInfo(user);
+				message.setMsg("success");
+				return message;
+			} else {
+				message.setMsg("the phone is unvalid");
+				return message;
+			}
+		} else {
+			message.setMsg("the email is unvalid");
+			return message;
+		}
+
+	}
+
+	@Override
+	public Message checkOld(String oldPsw, HttpServletRequest request) {
+		Message message = new Message();
+		User user = (User) request.getSession().getAttribute("u");
+		Md5Hash md5Hash = new Md5Hash(oldPsw);
+		String old = md5Hash.toString();
+		if (!user.getUserPassword().equals(old)) {
+			message.setMsg("current password error");
+			return message;
+		} else {
+			message.setMsg(" ");
+			return message;
+		}
+	}
+
+	@Override
+	public Message updatePsw(String newPassword1, User user) {
+		Message message = new Message();
+		Md5Hash md5Hash1 = new Md5Hash(newPassword1);
+		user.setUserPassword(md5Hash1.toString());
+		userDao.updatePsw(user);
+		message.setMsg("success");
+		return message;
 	}
 
 }

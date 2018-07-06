@@ -23,6 +23,11 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 @Table(name = "clubCart")
 public class ClubCard implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Column(length = 11)
 	private String id;

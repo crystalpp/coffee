@@ -1,0 +1,31 @@
+body{
+	background-color: #E3E8EE;
+}
+.all{
+	margin-left:  300px;
+	margin-top: 50px;
+}
+.update{
+	width: 55%;
+	
+}
+.photo{
+	margin: 0 auto;
+}
+.my_pic{
+	width: 100px;
+	margin-left: 180px;
+
+}
+.my_pic img{
+	width: 100%;
+	border-radius: 50px;
+}
+.mybtn{
+	width: 70%;
+	margin-left: 80px;
+	margin-top: 10px;
+}
+.user{
+	display: none;
+}

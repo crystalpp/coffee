@@ -14,4 +14,10 @@ public interface UserDao {
 
 	User loginbyPhone(String userPhone, String newPassword);
 
+	User findById(String userId);
+
+	void updateUserInfo(User user);
+
+	void updatePsw(User user);
+
 }

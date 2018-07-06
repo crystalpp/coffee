@@ -25,6 +25,11 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name = "record")
 public class Record implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Column(length = 11)
 	private String id;
